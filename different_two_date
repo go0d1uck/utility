@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+declare -i start=`date --date="$1" +%s`
+declare -i end=`date --date="$2" +%s`
+declare -i ans="($end-$start)/60/60/24"
+echo $ans
+
