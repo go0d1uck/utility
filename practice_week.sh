@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-week_dict=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday")
+week_dict=("monday" "tuesday" "wednesday" "thursday" "friday" "saturday" "sunday")
   echo -e "Please Choice Mode:\n1:english->num\n2:num->english"
   read mode
   while true
@@ -12,9 +12,9 @@ week_dict=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday
       read InputWeek
       if [ ${week_dict[$index]} == $InputWeek ];
       then
-        echo "OK"
+        echo "$(tput setaf 2)OK$(tput sgr 0)"
       else
-        echo "ERORR"
+        echo "$(tput setaf 1)ERORR$(tput sgr 0)"
         echo ${week_dict[$index]}
       fi
     else
@@ -23,9 +23,9 @@ week_dict=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday" "Saturday" "Sunday
       let InputIndex--
       if [ $InputIndex -eq $index ];
       then
-        echo "OK"
+        echo "$(tput setaf 2)OK$(tput sgr 0)"
       else
-        echo "ERORR"
+        echo "$(tput setaf 1)ERORR$(tput sgr 0)"
         echo $[ $index+1 ]
       fi
     fi
